@@ -54,7 +54,7 @@ const Home: React.FC = () => {
                     </Row>
                     <Row justify="space-between" style={{marginTop: '10px'}}>
                         <Col span={18}>
-                            <TextArea rows={4} placeholder="maxLength is 6" maxLength={6} value={htmlResult}/>
+                            <TextArea rows={10} placeholder="maxLength is 8" maxLength={8} value={htmlResult}/>
                         </Col>
                     </Row>
                 </Col>
