@@ -9,7 +9,6 @@ function App() {
     return (
         <BrowserRouter>
             <div>
-                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a>
                 <Layout style={{height: '100vh', width: '100vh'}}>
                     <Routes>
                         <Route path="/" element={<Home/>}/>

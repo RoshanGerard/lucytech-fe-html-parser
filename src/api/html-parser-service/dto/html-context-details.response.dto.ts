@@ -1,9 +1,16 @@
-import {AbstractResponseDto} from "./abstract-response.dto.ts";
-import {HtmlContextDetailsModel} from "../model/html-context-details.model.ts";
+export class HtmlContextDetailsResponseDto {
 
-export class HtmlContextDetailsResponseDto extends AbstractResponseDto<HtmlContextDetailsModel> {
+    htmlVersion: string;
+    title: string;
+    internalLinks: number;
+    externalLinks: number;
+    isLoginForm: boolean;
 
-    constructor(status: string, data: HtmlContextDetailsModel) {
-        super(status, data);
+    constructor(htmlVersion: string, title: string, internalLinks: number, externalLinks: number, isLoginForm: boolean) {
+        this.htmlVersion = htmlVersion;
+        this.title = title;
+        this.internalLinks = internalLinks;
+        this.externalLinks = externalLinks;
+        this.isLoginForm = isLoginForm;
     }
 }
