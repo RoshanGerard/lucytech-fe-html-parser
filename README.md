@@ -12,6 +12,25 @@ This application is designed to efficiently crawl through the provided URL and e
 With these capabilities, our HTML Parser Server aims to simplify web scraping and data extraction tasks, 
 making it a valuable tool for developers and analysts.
 
+## How to Run
+
+### Prepare to run
+When the repo is cloned please install the dependencies prior to start running the application,
+this is a one time process unless `node_modules` directory doesn't exists or deleted.
+
+```shell
+cd ~/<project>
+npm install
+```
+
+### Run the App
+Here we only provide instructions how to run frontend in development mode, please use the below command to run.
+
+```shell
+cd ~/<project>
+npm run dev
+```
+
 ## Dependencies
 
 This project uses the following dependencies:
