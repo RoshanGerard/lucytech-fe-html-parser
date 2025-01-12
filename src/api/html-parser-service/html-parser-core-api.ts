@@ -7,7 +7,7 @@ export class HtmlParserCoreApi extends CoreApi {
 
     protected constructor() {
         super();
-        const baseUrl = "http://html-parser-service:8080";
+        const baseUrl = import.meta.env.VITE_API_BASE_URL;
 
         HtmlParserCoreApi.client = axios.create({
             baseURL: baseUrl,
