@@ -23,7 +23,7 @@ export class HtmlParserCoreApi extends CoreApi {
         });
     }
 
-    public override async get(endpoint: string, params = {}): Promise<any> {
+    public override async get(endpoint: string, params: object): Promise<any> {
         try {
             return await HtmlParserCoreApi.client.get(endpoint, { params });
         } catch (error) {
