@@ -7,7 +7,8 @@ export class HtmlParserCoreApi extends CoreApi {
 
     protected constructor() {
         super();
-        const baseUrl = import.meta.env.VITE_API_BASE_URL;
+
+        const baseUrl = `${window.location.protocol}//${window.location.hostname}:8080`;
 
         HtmlParserCoreApi.client = axios.create({
             baseURL: baseUrl,
