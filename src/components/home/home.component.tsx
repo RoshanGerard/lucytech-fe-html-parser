@@ -2,18 +2,18 @@ import {Button, Col, Input, Row} from "antd";
 import {Content} from "antd/es/layout/layout";
 import TextArea from "antd/es/input/TextArea";
 import {HtmlPageParserApi} from "../../api/html-parser-service/html-page-parser-api.ts";
-import {useState} from "react";
+import {ChangeEvent, FC, useState} from "react";
 import {HtmlContextDetailsRequestDto} from "../../api/html-parser-service/dto/html-context-details.request.dto.ts";
 import Loader from "../notification/notification.component.tsx";
 
-const Home: React.FC = () => {
+const Home: FC = () => {
     const htmlPageParserApi: HtmlPageParserApi = new HtmlPageParserApi();
 
     const [urlValue, setUrlValue] = useState<string>('');
     const [htmlResult, setHtmlResult] = useState<string>('');
     const [loading, setLoading] = useState<boolean>(false);
 
-    const handleTxtUrlChange = (event) => {
+    const handleTxtUrlChange = (event: ChangeEvent<HTMLInputElement>) => {
         setUrlValue(event.target.value);
     }
 
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
             const payload: HtmlContextDetailsRequestDto = new HtmlContextDetailsRequestDto(urlValue);
             const response = await htmlPageParserApi.getHtmlMetadata(payload);
 
-            setHtmlResult(JSON.stringify(response.data.payload, null, 2));
+            setHtmlResult(JSON.stringify(response, null, 2));
 
             console.log(htmlResult);
         } finally {

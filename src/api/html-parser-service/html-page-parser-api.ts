@@ -10,6 +10,6 @@ export class HtmlPageParserApi extends HtmlParserCoreApi {
 
     public async getHtmlMetadata(payload: HtmlContextDetailsRequestDto): Promise<HtmlContextDetailsResponseDto> {
         const response = await this.post('/api/url-info', payload);
-        return response as HtmlContextDetailsResponseDto;
+        return response.data.payload as HtmlContextDetailsResponseDto;
     }
 }
