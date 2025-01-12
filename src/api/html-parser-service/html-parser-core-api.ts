@@ -7,7 +7,7 @@ export class HtmlParserCoreApi extends CoreApi {
 
     protected constructor() {
         super();
-        const baseUrl = "http://localhost:8080";
+        const baseUrl = "http://html-parser-service:8080";
 
         HtmlParserCoreApi.client = axios.create({
             baseURL: baseUrl,
